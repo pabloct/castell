@@ -18,6 +18,9 @@ public class Campain {
     @GeneratedValue
     @Column(name = "id")
     private Long id;
+   
+    @Column(name = "nombre")
+    private String nombre;
 
     @Column(name = "fecha_inicio")
     @Temporal(TemporalType.DATE)
@@ -60,6 +63,14 @@ public class Campain {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
 }
