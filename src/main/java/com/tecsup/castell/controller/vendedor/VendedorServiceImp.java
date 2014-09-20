@@ -22,7 +22,7 @@ public class VendedorServiceImp implements VendedorService {
 
     @Autowired
     PersonaDAO personaDAO;
-
+    
     @Autowired
     UsuarioDAO usuarioDAO;
 
@@ -51,6 +51,7 @@ public class VendedorServiceImp implements VendedorService {
             usuario.setEstado(EstadoEnum.ACTIVO.toString());
             usuario.setUsername(persona.getEmail());
             usuario.setPassword(persona.getEmail());
+            usuario.setRol(RolEnum.VENTA.toString());
             usuarioDAO.save(usuario);
             
         } else {
@@ -58,7 +59,6 @@ public class VendedorServiceImp implements VendedorService {
 
             Usuario usuario = persona.getUsuario();
             usuario.setUsername(persona.getEmail());
-            usuario.setRol(RolEnum.VENTA.toString());
             usuarioDAO.update(usuario);
         }
     }
@@ -70,8 +70,8 @@ public class VendedorServiceImp implements VendedorService {
         Usuario usuario = persona.getUsuario();
 
         usuarioDAO.delete(usuario);
-        personaDAO.delete(persona);
         vendedorDAO.delete(vendedor);
+        personaDAO.delete(persona);
     }
 
     @Override

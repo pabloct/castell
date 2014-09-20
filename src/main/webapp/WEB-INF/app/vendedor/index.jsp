@@ -29,7 +29,7 @@
 
                         <c:forEach var="i" items="${vendedores}">
                             <tr>
-                                <td><c:out value="${i.persona.nombres}"/></td>
+                                <td><c:out value="${i.persona.nombreCompleto}"/></td>
 
                                 <td><c:out value="${i.persona.email}"/></td>
 
@@ -48,10 +48,10 @@
                                             <span class="glyphicon glyphicon-cog"></span>
                                         </button>
                                         <ul class="dropdown-menu pull-right" role="menu">
-                                            <li><a href="<%=request.getContextPath()%>/adm/vendedor/estado/${i.persona.id}">Activar/Desactivar</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/adm/vendedor/estado/${i.id}">Activar/Desactivar</a></li>
                                             <li class="divider"></li>
-                                            <li><a href="<%=request.getContextPath()%>/adm/vendedor/update/${i.persona.id}">Editar</a></li>
-                                            <li><a href="<%=request.getContextPath()%>/adm/vendedor/delete/${i.persona.id}">Eliminar</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/adm/vendedor/update/${i.id}">Editar</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/adm/vendedor/delete/${i.id}">Eliminar</a></li>
                                         </ul>
                                     </div>
                                 </td>
