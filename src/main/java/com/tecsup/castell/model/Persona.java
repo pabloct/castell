@@ -10,6 +10,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "persona")
@@ -20,15 +21,19 @@ public class Persona {
     @Column(name = "id")
     private Long id;
 
+    @NotEmpty(message = "No debe ser vacio.")
     @Column(name = "paterno")
     private String paterno;
 
+    @NotEmpty(message = "No debe ser vacio.")
     @Column(name = "materno")
     private String materno;
 
+    @NotEmpty(message = "No debe ser vacio.")
     @Column(name = "nombres")
     private String nombres;
 
+    @NotEmpty(message = "No debe ser vacio.")
     @Column(name = "sexo")
     private String sexo;
 
@@ -36,6 +41,7 @@ public class Persona {
     @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;
 
+    @NotEmpty(message = "No debe ser vacio.")
     @Column(name = "email")
     private String email;
 

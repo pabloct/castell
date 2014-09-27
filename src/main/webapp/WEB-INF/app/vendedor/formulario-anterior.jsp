@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,16 +18,15 @@
 
                     <h1 class="page-header">Nuevo Vendedor</h1>
 
-                    <form:form method="POST" commandName="persona" action="/adm/vendedor/save"  class="form-horizontal">
-
-                        <form:input type="hidden" path="id" name="id"/>
-
+                    <form method="post" action="<%=request.getContextPath()%>/adm/vendedor/save" class="form-horizontal">
+                        
+                         <input type="hidden" value="${persona.id}" name="id">
+                        
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Paterno</label>
 
                             <div class="col-sm-10">
-                                <form:input type="text" name="paterno" cssClass="form-control" path="paterno"/>
-                                <form:errors path="paterno" cssClass="text-danger" />
+                                <input type="text" name="paterno" class="form-control" value="${persona.paterno}" >
                             </div>
                         </div>
 
@@ -36,9 +34,7 @@
                             <label class="col-sm-2 control-label">Materno</label>
 
                             <div class="col-sm-10">
-                                <form:input type="text" name="materno" cssClass="form-control" path="materno"/>
-                                <form:errors path="materno" cssClass="text-danger" />
-
+                                <input type="text" name="materno" class="form-control" value="${persona.materno}">
                             </div>
                         </div>
 
@@ -46,8 +42,7 @@
                             <label class="col-sm-2 control-label">Nombres</label>
 
                             <div class="col-sm-10">
-                                <form:input type="text" name="nombres" cssClass="form-control" path="nombres"/>
-                                <form:errors path="nombres" cssClass="text-danger" />
+                                <input type="text" name="nombres" class="form-control" value="${persona.nombres}">
                             </div>
                         </div>
 
@@ -55,8 +50,7 @@
                             <label class="col-sm-2 control-label">Email</label>
 
                             <div class="col-sm-10">
-                                <form:input type="email" name="email" cssClass="form-control" path="email"/>
-                                <form:errors path="email" cssClass="text-danger" />
+                                <input type="email" name="email" class="form-control" value="${persona.email}">
                             </div>
                         </div>
 
@@ -66,7 +60,7 @@
                                 <a class="btn btn-link" href="<%=request.getContextPath()%>/adm/vendedor"> Cancelar</a>
                             </div>
                         </div>
-                    </form:form>
+                    </form>
 
                 </section>
                 <!-- CONTENIDO -->
