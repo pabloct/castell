@@ -4,6 +4,6 @@ public interface AppConstant {
 
     String USUARIO_AUTENTICADO = "USUARIO_AUTENTICADO";
     
-    String EMAIL_SOPORTE = "soporte@albatross.pe";
+    String EMAIL_SOPORTE = "pabloct@unmsm.edu.pe";
 
 }

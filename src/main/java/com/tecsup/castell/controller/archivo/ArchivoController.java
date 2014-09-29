@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @RequestMapping("/adm/vendedor")
 public class ArchivoController {
 
-    @Autowired
+ /*   @Autowired
     ArchivoService service;
 
     @RequestMapping(method = RequestMethod.GET)
@@ -64,5 +64,5 @@ public class ArchivoController {
 
         service.changeEstado(id);
         return "redirect:/adm/vendedor";
-    }
+    }*/
 }

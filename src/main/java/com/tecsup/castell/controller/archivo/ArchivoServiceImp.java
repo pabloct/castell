@@ -6,6 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class ArchivoServiceImp implements ArchivoPrueba{
+public class ArchivoServiceImp /*implements ArchivoPrueba*/{
     
 }

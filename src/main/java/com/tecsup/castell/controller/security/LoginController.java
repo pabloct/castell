@@ -16,7 +16,7 @@ public class LoginController {
     public String index(HttpSession session, @RequestParam(required = false) String error, Model model) throws Exception {
 
         Persona autenticado = (Persona) session.getAttribute(AppConstant.USUARIO_AUTENTICADO);
-
+        //System.out.println(autenticado);
         if (autenticado != null) {
             if (autenticado.getUsuario().getRol().equals(RolEnum.VENTA.toString())) {
                 return ("redirect:/prospecto");

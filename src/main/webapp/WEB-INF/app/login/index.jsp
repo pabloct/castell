@@ -12,7 +12,7 @@
         <div class="container">
 
             <form class="form-signin" role="form" action="<%=request.getContextPath()%>/j_spring_security_check" method="POST" >
-                <h2 class="form-signin-heading text-center">Castell CRM</h2>
+                <h2 class="form-signin-heading text-center">Castell & CRM</h2>
 
 
                 <input type="email" class="form-control" placeholder="Correo" required="" autofocus="" name="j_username">
